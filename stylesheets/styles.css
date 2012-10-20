@@ -1,7 +1,11 @@
 @media screen and (max-width: 320px){
 }
 body {
-  font-family: Trebuchet MS,verdana;
+        position: relative;
+	margin: auto;
+	-webkit-text-size-adjust: none;
+	min-height: 320px;
+	 font-family: Trebuchet MS,verdana;
 	-webkit-background-size:0.438em 100%;
 	background:#cbd2d8;
 	background: -webkit-gradient(linear,left top,right top,from(#c5ccd4), color-stop(71%, #c5ccd4), color-stop(72%, #cbd2d8), to(#cbd2d8));
@@ -37,11 +41,6 @@ body {
 	line-height: 44px;
 	height: 44px;
 	font-size: 16pt;
-}
-#fixedDiv {
-position: fixed;
-top: 0;
-height: 45px;
 }
 a:link {
 	text-decoration: none;
