@@ -1,26 +1,67 @@
 <html>
 <head>
-    <title>Making Web Apps Full Screen Demo</title>
+    <title>Web Apps Full Screen Demo</title>
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-      if(navigator.platform == 'iPad' || navigator.platform == 'iPhone' || navigator.platform == 'iPod' || navigator.platform == 'Linux armv6l') {
- window.ontouchstart = function () {
- $("#fixedDiv").css("display", "none");
-}
-window.onscroll = function() { 
- var iPadPosition = window.innerHeight + window.pageYOffset-45; // 45 is the height of the Footer
- $("#fixedDiv").css("position", "absolute");
- $("#fixedDiv").css("top", iPadPosition);
- $("#fixedDiv").css("display", "block");
 
+<style type="text/css">
+    .btn_cardDetailsPg {height:5px !important;margin-top:-20px;}
+    html, body {overflow-x:hidden;overflow-y:auto;}
+    #lockDiv {
+  background-color: #fff;
+  color: #000;
+  float:left;
+  -moz-box-shadow: 0px 4px 2px 2px #ccc;-webkit-box-shadow: 0px 4px 2px 2px #ccc;box-shadow:0px 4px 2px 2px #ccc;
+  }
+#lockDiv.stick {
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  margin-left:0px;
+  }
+</style>
 
-// in the CSS file should stand:
-#fixedDiv {position: fixed; bottom: 0; height: 45px;  whatever else} 
-    </script>
+    <script type="text/javascript">
+    if (navigator.userAgent.match(/like Mac OS X/i)) {
+        window.onscroll = function() {
+
+        if (window.innerWidth > window.innerHeight) {
+            //alert("landscape [ ]");
+            document.getElementById('lockDiv').style.top =
+            (window.pageYOffset + window.innerHeight - 268) + 'px';
+        }
+
+        if (window.innerHeight > window.innerWidth) {
+            //alert("portrait ||");
+            document.getElementById('lockDiv').style.top =
+            (window.pageYOffset + window.innerHeight - 418) + 'px';
+        }
+        };
+    }
+</script>
 </head>
 <body>
+
     <h1>Mobile Demo</h1>
-    
+    <div id="lockSticky"></div>
+<div id="lockDiv">fooo</div>
+
+<script type="text/javascript">
+    function sticky_relocate() {
+        var window_top = $(window).scrollTop();
+        var div_top = $('#lockSticky').offset().top;
+        if (window_top > div_top)
+            $('#lockDiv').addClass('stick')
+        else
+            $('#lockDiv').removeClass('stick');
+    }
+    $(function() {
+        $(window).scroll(sticky_relocate);
+        sticky_relocate();
+    });
+</script>
+
+
+
 </body>
 </html>
