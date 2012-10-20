@@ -1,11 +1,10 @@
 @media screen and (max-width: 320px){
-
 }
 body {
   position: relative;
 	margin: auto;
 	-webkit-text-size-adjust: none;
-	min-height: 460px;
+	min-height: 900px;
 	font-family: Trebuchet MS,verdana;
 	-webkit-background-size:0.438em 100%;
 	background:#cbd2d8;
