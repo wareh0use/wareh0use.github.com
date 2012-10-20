@@ -4,24 +4,43 @@
     <meta charset="utf-8">
     <meta content="yes" name="apple-mobileweb-app-capable" />
     <link href="http://i1289.photobucket.com/albums/b513/wareh0use/logo_zps40fb9845.png" rel="apple-touch-icon" />
-    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
+    <meta content="minimum-scale=1.0, width=device-width, user-scalable=no" name="viewport" />
     <meta name="viewport" content="width=device-width">
-    <meta name="viewport" content="width=320">
+    
     <link rel="apple-touch-startup-image" media="(device-width: 320px)" href="http://i1289.photobucket.com/albums/b513/wareh0use/g3821_zpsac15ed8c.png">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <script type="text/javascript" src="javascripts/scale.fix.js"></script>
-    <script type="text/javascript" src="javascripts/functions.js"></script>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <title>wareh0use</title>
 
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <link rel="apple-touch-startup-image" media="(device-width: 320px)" href="http://i1289.photobucket.com/albums/b513/wareh0use/g3821_zpsac15ed8c.png">
     <link href="https://github.com/wareh0use/wareh0use.github.com/blob/master/favicon.ico" rel="icon" type="image/x-icon" />
     <link rel=”shortcut icon” href=”https://github.com/wareh0use/wareh0use.github.com/blob/master/favicon.ico” />
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+<script>
+      function hideAddressBar()
+      {
+          if(!window.location.hash)
+          { 
+              if(document.height <= window.outerHeight + 10)
+              {
+                  document.body.style.height = (window.outerHeight + 50) +'px';
+                  setTimeout( function(){ window.scrollTo(0, 1); }, 50 );
+              }
+              else
+              {
+                  setTimeout( function(){ window.scrollTo(0, 1); }, 0 ); 
+              }
+          }
+      } 
+
+      window.addEventListener("load", hideAddressBar );
+      window.addEventListener("orientationchange", hideAddressBar ); 
+    </script>
+
 </head>
 <body>
 <div id="topbar">
