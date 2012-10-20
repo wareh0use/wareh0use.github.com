@@ -1,53 +1,33 @@
-<style>
-		progress.withText
-{
-    color: inherit; /* Uses the same text color as the page */
-    vertical-align: text-bottom; /* Makes the bottom of the control align with the bottom of its label */
-}
+<html>
+<head>
+    <title>Making Web Apps Full Screen Demo</title>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      function hideAddressBar()
+      {
+          if(!window.location.hash)
+          { 
+              if(document.height <= window.outerHeight + 10)
+              {
+                  document.body.style.height = (window.outerHeight + 50) +'px';
+                  setTimeout( function(){ window.scrollTo(0, 1); }, 50 );
+              }
+              else
+              {
+                  setTimeout( function(){ window.scrollTo(0, 1); }, 0 ); 
+              }
+          }
+      } 
 
-/* Text style for a label for the progress ring */
-.progressRingText
-{
-    font-family: "Segoe UI";
-}
-
-/* Text style for a label for a default size progress ring */
-.progressRingText
-{
-    font-size: 11pt;
-    line-height: 15pt;
-}
-
-/* The margin to separate the ring and its label */
-.progressRingText progress
-{
-    margin-right: 5px;
-}	
-		
-</style>
-		
-		
-		
-		<script>
-			var progressBar = document.getElementById("determinateProgressBar");
-progressBar.value = value;
-			}
-			
-		</script>
-
-	</head>
-
-<body -dir="rtl">
-
-<progress id="determinateProgressBar" value="90" max="100"></progress>
-
-
-<!-- Create an indeterminate progress bar -->
-<progress></progress>
-
-<label class="progressRingText">
-<progress class="win-ring withText"></progress>Processing</label>
-
+      window.addEventListener("load", hideAddressBar );
+      window.addEventListener("orientationchange", hideAddressBar ); 
+    </script>
+</head>
+<body>
+    <h1>Mobile Demo</h1>
+    <div style="background-color: red; height: 600px;"> </div>
+    <h2><a name="subheading">This is a subheading</a></h2>
+    <div style="background-color: black; height: 800px;"> </div>
 </body>
-
 </html>
