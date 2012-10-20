@@ -42,7 +42,9 @@ body {
 	height: 44px;
 	font-size: 16pt;
 }
-#fixedDiv {position: fixed; bottom: 0; height: 45px;
+#fixedDiv {
+position: fixed;
+top: 0; height: 45px;
 }
 a:link {
 	text-decoration: none;
