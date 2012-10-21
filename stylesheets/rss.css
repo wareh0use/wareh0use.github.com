@@ -1,0 +1,98 @@
+/* begin styles for RSS Feed */
+.rss_title p {
+  font-size: 13px;
+  font-weight : normal; 
+  position: relative;
+  color:#4C4C4C;
+
+list-style: none;
+}
+.cover{
+	height: 200px;
+	width: 100%;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+.rss_box {
+	background-color: #fff;
+	border: #878787 solid 0px;
+	font-size: 12pt;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	display: block;
+	height: auto;
+	width: auto;
+	margin: 3px 9px 17px;
+	list-style: none;
+}
+
+.rss_title, rss_title a {
+	font-family: "Trebuchet MS", Trebuchet, Lucida, sans-serif;
+	letter-spacing: 1px;
+	position: relative;
+	font-weight: bold;
+	font-size: 17px;
+	right: 20px;
+	left: 9px;
+	color: #8195af;
+	text-shadow: #fff 0 1px 0;
+	padding: 1px 0 3px 8px;
+	text-decoration:none;
+	
+}
+.rss_items li{
+border-bottom:1px solid #000000;
+margin-bottom:3px;
+
+}
+.rss_items span{
+  font-size: 13px;
+  font-weight : normal; 
+  margin: 8px 0;
+  color:green;
+}
+
+.rss_item  {
+  font-family: Trebuchet MS, arial, sans-serif;
+  font-size: 13px;
+  font-weight : bold; 
+  margin: 3px 0;
+  list-style: none;
+}
+
+.rss_item a:link, .rss_item a:visited, .rss_item a:active {
+	text-decoration : none;
+	border-bottom: 1px solid #ededed;
+	color: red;
+	}
+
+.rss_item a:hover { 
+	text-decoration : none;
+	color: red;
+	border-bottom: 0px solid #e0861e;
+	}
+	
+.rss_date {
+	font-size: 11px;
+	font-weight : normal;
+	color: #F60;
+	}
+	
+/* Image Settings */
+	
+img {
+float: left;
+vertical-align: top;
+border-top-width: 0px;
+border-right-width: 0px;
+border-bottom-width: 0px;
+border-left-width: 0px;
+border-top-style: solid;
+border-right-style: solid;
+border-bottom-style: solid;
+border-left-style: solid;
+width: 32px;
+height: 32px;
+margin-right:5px;
+}
